@@ -1,33 +1,18 @@
 import React from 'react';
-import posed from "react-pose";
-import styled from "styled-components";
+import Box from './Components/Box';
 import './App.css';
 
-state = { hovering: false };
-
-const Container = styled.div`
- height: 100vh;
- display: flex;
- align-items: center;
- justify-content: center;
-`;
-
-const Square = posed.div({
-  idle: { scale: 1 },
-  hovered: { scale: 1.5 }
-});
-
-const StyledSquare = styled(Square)`
-  width:100px;
-  height: 100px;
-  background:red;
-`;
 
 function App() {
 
   return (
     <div className="App">
-      
+        <svg>
+        <circle cx={50} cy={50} r={10} fill="red" />
+        <polygon cy={200} points="100,100 50,50, 0,0" />
+      </svg>
+      eat my shorts
+      <Box></Box>
     </div>
   );
 }
