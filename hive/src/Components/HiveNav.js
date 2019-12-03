@@ -36,6 +36,10 @@ class HiveNav extends Component {
     ]
   };
 
+  handleClick = () => {
+    alert('hi');
+  };
+
   handleLeave = () => {
     let opacity = this.state.show ? 0 : 1;
     let btnText = this.state.show ? "Enter" : "Leave";
