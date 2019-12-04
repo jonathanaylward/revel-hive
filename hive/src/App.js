@@ -1,8 +1,6 @@
 import React from 'react';
-import Hexagon from './Components/Hexagon';
 import HiveNav from './Components/HiveNav'
 import styled from 'styled-components';
-import Game from './Components/Game';
 import './App.css';
 
 const Container = styled.div`

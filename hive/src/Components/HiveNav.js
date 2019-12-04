@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { easePolyOut } from "d3-ease";
 import Animate from "react-move/Animate";
 import Hexagon from "./Hexagon";
+import SubNav from "./SubNav";
+import {HiveNavData, esportsNavData } from "./Data";
 
 class HiveNav extends Component {
   state = {
@@ -9,40 +11,18 @@ class HiveNav extends Component {
     rotate: 360,
     show: true,
     opacity: 1,
-    HiveNav: [
-      {
-        top: 0,
-        left: 0,
-        delay: 0,
-        fill: `black`,
-        category: `main`,
-      },
-      {
-        top: -250,
-        left: 0,
-        delay: 500,
-        fill: `blue`,
-        category: `esports`,
-      },
-      {
-        top: -120,
-        left: 140,
-        delay: 500,
-        fill: "blue",
-        category: `events`,
-      },
-      {
-        top: -120,
-        left: -140,
-        delay: 500,
-        fill: "blue",
-        category: `buttstuff`,
-      }
-    ]
+    subNavData: [],
   };
 
   handleClick = (category) => {
-    alert(category);
+    // const subNavData = this.state.subNavData.slice();
+    if(category === 'esports') {
+      this.setState({
+        subNavData: esportsNavData,
+      });
+    } else {
+      alert('blow a goat');
+    }
   };
 
   handleLeave = () => {
@@ -50,11 +30,9 @@ class HiveNav extends Component {
     let btnText = this.state.show ? "Enter" : "Leave";
     this.setState({ btnText, opacity, show: !this.state.show });
   };
-  
-  animateSubNav = () => alert('animate subnav');
 
   animateHiveNav = () =>
-    this.state.HiveNav.map((hexagon, i) => (
+    HiveNavData.map((hexagon, i) => (
       <Animate
         key={i}
         show={this.state.show}
@@ -88,14 +66,13 @@ class HiveNav extends Component {
                 position: `absolute`,
                 opacity
             }}
-            //TODO figure out how to pass info about which Hexagon is being clicked. 
-            //Props from the array of objects?
             onClick={() => this.handleClick(hexagon.category)}
           ></Hexagon>
           );
         }}
       </Animate>
     ));
+
   render() {
     return (
       <div>
@@ -111,10 +88,11 @@ class HiveNav extends Component {
 
         <div style={{ position: "relative"}}>
           {this.animateHiveNav()}
+          <SubNav
+            data={this.state.subNavData}
+          >
+          </SubNav>
         </div>
-        <button style={{position:`fixed`, left:`0`,top:`0`}} onClick={this.handleLeave}>
-          {this.state.btnText} HiveNav
-        </button>
       </div>
     );
   }
