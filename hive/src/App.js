@@ -16,10 +16,10 @@ function App() {
 
   return (
     <div className="App">
-      <Game></Game>
-      {/* <Container>
+      {/* <Game></Game> */}
+      <Container>
         <HiveNav></HiveNav>
-      </Container> */}
+      </Container>
     </div>
   );
 }

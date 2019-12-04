@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { easePolyOut } from "d3-ease";
 import Animate from "react-move/Animate";
 import Hexagon from "./Hexagon";
+
 class HiveNav extends Component {
   state = {
     btnText: "Leave",
@@ -13,31 +14,35 @@ class HiveNav extends Component {
         top: 0,
         left: 0,
         delay: 0,
-        fill: `black`
+        fill: `black`,
+        category: `main`,
       },
       {
         top: -250,
         left: 0,
         delay: 500,
-        fill: `blue`
+        fill: `blue`,
+        category: `esports`,
       },
       {
         top: -120,
         left: 140,
         delay: 500,
-        fill: "blue"
+        fill: "blue",
+        category: `events`,
       },
       {
         top: -120,
         left: -140,
         delay: 500,
-        fill: "blue"
+        fill: "blue",
+        category: `buttstuff`,
       }
     ]
   };
 
-  handleClick = () => {
-    alert('hi');
+  handleClick = (category) => {
+    alert(category);
   };
 
   handleLeave = () => {
@@ -45,6 +50,8 @@ class HiveNav extends Component {
     let btnText = this.state.show ? "Enter" : "Leave";
     this.setState({ btnText, opacity, show: !this.state.show });
   };
+  
+  animateSubNav = () => alert('animate subnav');
 
   animateHiveNav = () =>
     this.state.HiveNav.map((hexagon, i) => (
@@ -71,7 +78,7 @@ class HiveNav extends Component {
           timing: { delay: hexagon.delay, duration: 1000, ease: easePolyOut }
         }}
       >
-        {({ opacity, left, top, fill }) => {
+        {({ opacity, left, top, fill, category }) => {
           return (
             <Hexagon
             imageLink="http://www.revelmarketing.co/uploads/1/6/2/6/16262646/revel-marketing-partnership-solutions-2.png"
@@ -81,6 +88,9 @@ class HiveNav extends Component {
                 position: `absolute`,
                 opacity
             }}
+            //TODO figure out how to pass info about which Hexagon is being clicked. 
+            //Props from the array of objects?
+            onClick={() => this.handleClick(hexagon.category)}
           ></Hexagon>
           );
         }}

@@ -12,7 +12,6 @@ import styled from "styled-components";
 class Hexagon extends React.Component {
     state = { hovering: false };
     render() {
-        
         const StyledHexagon = styled.polygon`
             fill:${this.props.fill};
             stroke:#fefefe;
@@ -29,6 +28,7 @@ class Hexagon extends React.Component {
                     pose={this.state.hovering ? "hovered" : "idle"}
                     onMouseEnter={() => this.setState({ hovering: true })}
                     onMouseLeave={() => this.setState({ hovering: false })}
+                    onClick={this.props.onClick}
                 />
                 <image href={this.props.imageLink} height="100" width="100" x="18%" y="20%"/>
                 </g>
