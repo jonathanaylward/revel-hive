@@ -1,4 +1,4 @@
-const HiveNavData = [
+const MainNavData = [
     {
       top: 0,
       left: 0,
@@ -59,4 +59,5 @@ const esportsNavData = [
         category: `events`,
       }
 ]
-export { HiveNavData, esportsNavData }
+
+export { MainNavData, esportsNavData }

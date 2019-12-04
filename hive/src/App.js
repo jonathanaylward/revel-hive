@@ -1,5 +1,5 @@
 import React from 'react';
-import HiveNav from './Components/HiveNav'
+import NavController from './Components/NavController'
 import styled from 'styled-components';
 import './App.css';
 
@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       {/* <Game></Game> */}
       <Container>
-        <HiveNav></HiveNav>
+        <NavController></NavController>
       </Container>
     </div>
   );
