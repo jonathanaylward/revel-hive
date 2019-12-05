@@ -10,7 +10,12 @@ import styled from "styled-components";
 // `;
 
 class Hexagon extends React.Component {
-    state = { hovering: false };
+    constructor(props) {
+        super(props);
+        this.state = {
+            hovering:false,
+        };  
+      }
     render() {
         const StyledHexagon = styled.polygon`
             fill:${this.props.fill};
@@ -29,6 +34,8 @@ class Hexagon extends React.Component {
                     onMouseEnter={() => this.setState({ hovering: true })}
                     onMouseLeave={() => this.setState({ hovering: false })}
                     onClick={this.props.onClick}
+                    ref={this.props.hexagonRef}
+                    className={this.props.classNames}
                 />
                 <image href={this.props.imageLink} height="100" width="100" x="18%" y="20%"/>
                 </g>

@@ -56,6 +56,8 @@ class HexNav extends Component {
                 opacity: opacity,
             }}
             onClick={() => this.handleClick(hexagon.category)}
+            hexagonRef={this.hexagonRef}
+            classNames={this.props.classNames + ' ' + hexagon.category}
           ></Hexagon>
           );
         }}
