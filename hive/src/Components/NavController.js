@@ -13,7 +13,7 @@ class NavController extends Component {
       subNavData: [],
     };  
   }
-
+  //TODO: Disable Clicking while animating
   handleMainNavClick = (category) => {
     console.log('call handleMainNavClick()')
     if(category !== 'main') {
