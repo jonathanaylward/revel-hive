@@ -31,28 +31,28 @@ const MainNavData = [
 
 const esportsNavData = [
     {   
-        top: 0,
+        top: -100,
         left: 0,
         delay: 0,
         fill: "green",
         category: `events`,
       },
       {
-        top: 0,
+        top: -100,
         left: 150,
         delay: 0,
         fill: "green",
         category: `events`,
       },
       {
-        top: 0,
+        top: -100,
         left: 300,
         delay: 0,
         fill: "green",
         category: `events`,
       },
       {
-        top: 0,
+        top: -100,
         left: 450,
         delay: 0,
         fill: "green",

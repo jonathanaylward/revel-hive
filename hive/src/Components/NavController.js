@@ -8,13 +8,14 @@ class NavController extends Component {
     
     this.state = {
       showMainNav: true,
-      showSubNav: true,
+      showSubNav: false,
       mainNavData: MainNavData,
       subNavData: [],
     };  
   }
 
   handleMainNavClick = (category) => {
+    document.addEventListener('click', this.handleOutsideClick, false);
     if(category === 'esports') {
       console.log('category was '+category+' babay!');
       this.setState({
@@ -27,6 +28,30 @@ class NavController extends Component {
     }
   }
   
+  handleSubNavClick = () => {
+        // attach/remove event handler
+    if (!this.state.showSubNav) {
+      document.addEventListener('click', this.handleOutsideClick, false);
+    } else {
+      document.addEventListener('click', this.handleOutsideClick, false);
+    }
+
+    this.setState(prevState => ({
+      showSubNav: !prevState.showSubNav,
+    }));
+  }
+
+  handleOutsideClick = (e) => {
+    console.log('handleOutsideClick' + e.target);
+    console.log(this);
+    if (this.node.contains(e.target)) {
+      return;
+    }
+
+    alert('clicked outside of subnav');
+    this.handleSubNavClick()
+  }
+
   handleLeave = () => {
     let opacity = this.state.show ? 0 : 1;
     let btnText = this.state.show ? "Enter" : "Leave";
@@ -56,6 +81,7 @@ class NavController extends Component {
           ></HexNav>
           <HexNav
             data={this.state.subNavData}
+            // passing instance of function down to component (not calling the function)
             onItemClick={this.handleSubNavClick}
             btnText={'Leave'}
             show={this.state.showSubNav}
