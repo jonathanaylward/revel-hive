@@ -48,7 +48,7 @@ class HexNav extends Component {
         {({ opacity, left, top, fill }) => {
           return (
             <Hexagon
-            imageLink={"http://www.revelmarketing.co/uploads/1/6/2/6/16262646/revel-marketing-partnership-solutions-2.png"}
+            imageLink={hexagon.imageLink}
             fill={fill}
             SvgAnimationStyle={{
                 transform: `translate(${left}px , ${top}px)`,

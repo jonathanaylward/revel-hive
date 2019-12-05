@@ -37,7 +37,15 @@ class Hexagon extends React.Component {
                     ref={this.props.hexagonRef}
                     className={this.props.classNames}
                 />
-                <image href={this.props.imageLink} height="100" width="100" x="18%" y="20%"/>
+                <image 
+                    onClick={this.props.onClick}
+                    className={this.props.classNames} 
+                    href={this.props.imageLink} 
+                    height="100" 
+                    width="100" 
+                    x="18%" 
+                    y="20%"
+                />
                 </g>
             </svg>
         )
