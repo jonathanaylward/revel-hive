@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import './App.css';
 
 const Container = styled.div`
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,7 +14,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Game></Game> */}
       <Container>
         <NavController></NavController>
       </Container>

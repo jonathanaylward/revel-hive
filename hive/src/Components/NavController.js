@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import HexNav from "./HexNav";
-import {MainNavData, esportsNavData, eventsNavData, regularSports } from "./Data";
+import {MainNavData, partnershipSalesData, marketingData, consultingData, contactData } from "./Data";
 
 class NavController extends Component {
   constructor(props) {
@@ -28,26 +28,34 @@ class NavController extends Component {
 
 
     switch(category) {
-      case 'esports':
+      case 'partnership-sales':
         console.log('category was '+category+' babay!');
         this.setState(prevState => ({
-          subNavData: esportsNavData,
+          subNavData: partnershipSalesData,
           showMainNav: false,
           showSubNav: true,
         }));
         break;
-      case 'regularSports':
+      case 'marketing':
         console.log('category was '+category+' babay!');
         this.setState(prevState => ({
-          subNavData: regularSports,
+          subNavData: marketingData,
           showMainNav: false,
           showSubNav: true,
         }));
         break;
-      case 'events':
+      case 'consulting':
         console.log('category was '+category+' babay!');
         this.setState(prevState => ({
-          subNavData: eventsNavData,
+          subNavData: consultingData,
+          showMainNav: false,
+          showSubNav: true,
+        }));
+        break;
+      case 'contact':
+        console.log('category was '+category+' babay!');
+        this.setState(prevState => ({
+          subNavData: contactData,
           showMainNav: false,
           showSubNav: true,
         }));
@@ -73,8 +81,6 @@ class NavController extends Component {
         showSubNav: false,
       }));
     }
-
-    // debugger;
   }
 
   handleSubNavClick = () => {
@@ -89,18 +95,7 @@ class NavController extends Component {
 
   render() {
     return (
-      <div>
-        <div
-          style={{
-            width: "250px",
-            display: "flex",
-            justifyContent: "space-around",
-            marginTop: "15px"
-          }}
-        >
-        </div>
-
-        <div style={{ position: "relative"}}>
+        <div>
           <HexNav
             data={this.state.mainNavData}
             onItemClick={this.handleMainNavClick}
@@ -121,7 +116,6 @@ class NavController extends Component {
             classNames={"sub-nav-hex"}
           ></HexNav>
         </div>
-      </div>
     );
   }
 }

@@ -29,7 +29,8 @@ class HexNav extends Component {
           opacity: 0,
           left: 0,
           top:0,
-          fill: hexagon.fill
+          fill: hexagon.fill,
+          stroke: hexagon.stroke
         }}
         enter={{
           opacity: [this.props.opacity],
@@ -45,14 +46,16 @@ class HexNav extends Component {
           timing: { delay: hexagon.delay, duration: 1000, ease: easePolyOut }
         }}
       >
-        {({ opacity, left, top, fill }) => {
+        {({ opacity, left, top, fill, stroke }) => {
           return (
             <Hexagon
             imageLink={hexagon.imageLink}
+            text={hexagon.text}
             fill={fill}
+            stroke={stroke}
             SvgAnimationStyle={{
-                transform: `translate(${left}px , ${top}px)`,
                 position: `absolute`,
+                transform: `translate(${left}px , ${top}px)`,
                 opacity: opacity,
             }}
             onClick={() => this.handleClick(hexagon.category)}
@@ -66,7 +69,12 @@ class HexNav extends Component {
 
   render() {
     return (
-      <div>
+      <div  style={{
+        "position": "relative",
+        "display": "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }} >
         {this.animateNav(this.props.data)}
       </div>
     );
