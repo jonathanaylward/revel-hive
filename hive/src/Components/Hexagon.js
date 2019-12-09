@@ -43,8 +43,8 @@ class Hexagon extends React.Component {
                     href={this.props.imageLink} 
                     height="100" 
                     width="100" 
-                    x="18%" 
-                    y="20%"
+                    x="17%" 
+                    y="23%"
                 />
                 </g>
             </svg>

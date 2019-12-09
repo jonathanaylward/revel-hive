@@ -14,7 +14,7 @@ const MainNavData = [
     {
       top: -250,
       left: 0,
-      delay: 400,
+      delay: 200,
       fill: mediumBlue,
       category: `esports`,
       imageLink: "",
@@ -22,7 +22,7 @@ const MainNavData = [
     {
       top: -120,
       left: 140,
-      delay: 400,
+      delay: 200,
       fill: lightBlue,
       category: `events`,
       imageLink: "",
@@ -30,7 +30,7 @@ const MainNavData = [
     {
       top: -120,
       left: -140,
-      delay: 400,
+      delay: 200,
       fill: blue,
       category: `regularSports`,
       imageLink: "",
