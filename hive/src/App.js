@@ -4,10 +4,7 @@ import styled from 'styled-components';
 import './App.css';
 
 const Container = styled.div`
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 50vh;
 `;
 
 function App() {

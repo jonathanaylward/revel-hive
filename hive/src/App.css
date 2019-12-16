@@ -1,3 +1,15 @@
+.hex-nav-box {
+    background-color:pink;
+    color:white;
+    position: absolute;
+    left:-200px;
+    width: 213px;
+    height: 185px;
+    display:flex;
+    justify-content:center;
+    align-items:center
+}
+
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
     margin: 20px;
