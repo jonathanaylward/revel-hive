@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import './App.css';
 
 const Container = styled.div`
-    height: 650px;
+    height: 610px;
 `;
 
 function App() {

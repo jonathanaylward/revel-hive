@@ -18,9 +18,9 @@ class Hexagon extends React.Component {
                 className={this.props.classNames}
                 style={this.props.boxStyling}  
             > 
-            <span>
-            {this.props.text}
-            </span>
+                <span>
+                {this.props.text}
+                </span>
             </div>
         )
     }

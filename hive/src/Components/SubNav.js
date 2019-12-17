@@ -72,6 +72,7 @@ class SubNav extends Component {
       >
         {({ opacity, left, top, fill, stroke }) => {
           return (
+            <a href={hexagon.link} >
             <Hexagon
             onRest={console.log('animation complete')}
             imageLink={hexagon.imageLink}
@@ -86,6 +87,7 @@ class SubNav extends Component {
             hexagonRef={this.hexagonRef}
             classNames={this.props.classNames + ' ' + hexagon.category + ' hex-nav-box'}
           ></Hexagon>
+          </a>
           );
         }}
       </Animate>

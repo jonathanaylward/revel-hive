@@ -100,6 +100,7 @@ const partnershipSalesData = [
         stroke: stroke1,
         text: `Esports & Gaming`,
         category: `partnership-sales`,
+        link: `/partnership-sales/esports`,
       },
       {
         top: -101,
@@ -108,9 +109,10 @@ const partnershipSalesData = [
         initialLeft: 0,
         delay: 0,
         fill: color1,
-      stroke: stroke1,
+        stroke: stroke1,
         text: `Festivals & Events`,
         category: `partnership-sales`,
+        link: `/partnership-sales/festivals-and-events`,
       },
       {
         top: -101,
@@ -119,9 +121,10 @@ const partnershipSalesData = [
         initialLeft: 0,
         delay: 0,
         fill: color1,
-      stroke: stroke1,
+        stroke: stroke1,
         text: `Traditional Sports`,
         category: `partnership-sales`,
+        link: `/partnership-sales/traditional-sports`,
       },
       {
         top: -101,
@@ -130,9 +133,10 @@ const partnershipSalesData = [
         initialLeft: 0,
         delay: 0,
         fill: color1,
-      stroke: stroke1,
+        stroke: stroke1,
         text: `Consulting`,
         category: `partnership-sales`,
+        link: `/partnership-sales/consulting`,
       }
 ]
 
@@ -147,6 +151,7 @@ const marketingData = [
       stroke: stroke2,
       text: `Marketing Plans`,
       category: `marketing`,
+      link: `/marketing/marketing-plans`,
     },
     {
       top: -50,
@@ -158,6 +163,7 @@ const marketingData = [
       stroke: stroke2,
       text: `Brand Marketing Campaigns`,
       category: `marketing`,
+      link: `/marketing/brand-marketing-campaigns`,
     },
     {
       top: -50,
@@ -169,6 +175,7 @@ const marketingData = [
       stroke: stroke2,
       text: `Direct Marketing`,
       category: `marketing`,
+      link: `/marketing/direct-marketing`,
     }
 ]
 
@@ -184,6 +191,7 @@ const consultingData = [
       stroke: stroke3,
       text: `Hospitality`,
       category: `consulting`,
+      link: `/consulting/hospitality`,
     },
     {
       top: 50,
@@ -195,6 +203,7 @@ const consultingData = [
       stroke: stroke3,
       text: `Marketing Strategy`,
       category: `consulting`,
+      link: `/consulting/marketing-strategy`,
     },
     {
       top: 50,
@@ -206,6 +215,7 @@ const consultingData = [
       stroke: stroke3,
       text: `Partnership Strategy`,
       category: `consulting`,
+      link: `/consulting/partnership-strategy`,
     }
 ]
 
@@ -220,6 +230,7 @@ const contactData = [
       stroke: stroke4,
       text: `Set A Meeting`,
       category: `contact`,
+      link: `/contact#set-a-meeting`,
     },
     {
       top: 101,
@@ -231,6 +242,7 @@ const contactData = [
       stroke: stroke4,
       text: `Request Pricing`,
       category: `contact`,
+      link: `/contact#request-pricing`,
     },
     {
       top: 101,
@@ -242,6 +254,7 @@ const contactData = [
       stroke: stroke4,
       text: `Free Consultation`,
       category: `contact`,
+      link: `/contact#free-consultation`,
     }
 ]
 
