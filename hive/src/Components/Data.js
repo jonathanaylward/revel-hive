@@ -92,7 +92,7 @@ const MainNavData = [
 const partnershipSalesData = [
       {
         top: -101,
-        left: 100,
+        left: 151,
         initialTop: -101,
         initialLeft: 0,
         delay: 0,
@@ -103,7 +103,7 @@ const partnershipSalesData = [
       },
       {
         top: -101,
-        left: 200,
+        left: 251,
         initialTop: -101,
         initialLeft: 0,
         delay: 0,
@@ -114,7 +114,7 @@ const partnershipSalesData = [
       },
       {
         top: -101,
-        left: 300,
+        left: 351,
         initialTop: -101,
         initialLeft: 0,
         delay: 0,
@@ -125,7 +125,7 @@ const partnershipSalesData = [
       },
       {
         top: -101,
-        left: 400,
+        left: 451,
         initialTop: -101,
         initialLeft: 0,
         delay: 0,
@@ -212,7 +212,7 @@ const consultingData = [
 const contactData = [
     {
       top: 101,
-      left: 100,
+      left: 151,
       initialTop: 101,
       initialLeft: 0,
       delay: 0,
@@ -223,7 +223,7 @@ const contactData = [
     },
     {
       top: 101,
-      left: 200,
+      left: 251,
       initialTop: 101,
       initialLeft: 0,
       delay: 0,
@@ -234,7 +234,7 @@ const contactData = [
     },
     {
       top: 101,
-      left: 300,
+      left: 351,
       initialTop: 101,
       initialLeft: 0,
       delay: 0,
