@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HexNav from "./HexNav";
+import SubNav from "./SubNav";
 import {MainNavData, partnershipSalesData, marketingData, consultingData, contactData } from "./Data";
 
 class NavController extends Component {
@@ -11,77 +12,92 @@ class NavController extends Component {
       showSubNav: false,
       mainNavData: MainNavData,
       subNavData: [],
+      previousCategory: null,
     };  
   }
   //TODO: Disable Clicking while animating
   handleMainNavClick = (category) => {
+    const  previousCategory = this.state.previousCategory
     console.log('call handleMainNavClick()')
-    if(category !== 'main') {
-      if (!this.state.showSubNav) {
-        console.log('handleMainNavClick Adding Click Event Listener');
-        document.addEventListener('click', this.handleClick, false);
-      } else {
-        console.log('handleMainNavClick Removing Click Event Listener');
-        document.removeEventListener('click', this.handleClick, false);
+    console.log('current category is' + this.state.previousCategory)
+    console.log('Clicked category is' + category);
+    if(previousCategory === category) {
+      console.log('categories match');
+      if(this.state.showSubNav) {
+        this.setState(prevState => ({
+          showSubNav: false,
+        }));
+        return;
       }
     }
+
+    // if(category !== 'main') {
+    //   if (!this.state.showSubNav) {
+    //     console.log('handleMainNavClick Adding Click Event Listener');
+    //     document.addEventListener('click', this.handleClick, false);
+    //   } else {
+    //     console.log('handleMainNavClick Removing Click Event Listener');
+    //     document.removeEventListener('click', this.handleClick, false);
+    //   }
+    // }
 
 
     switch(category) {
       case 'partnership-sales':
-        console.log('category was '+category+' babay!');
         this.setState(prevState => ({
           subNavData: partnershipSalesData,
-          showMainNav: false,
+          showMainNav: true,
           showSubNav: true,
         }));
         break;
       case 'marketing':
-        console.log('category was '+category+' babay!');
         this.setState(prevState => ({
           subNavData: marketingData,
-          showMainNav: false,
+          showMainNav: true,
           showSubNav: true,
         }));
         break;
       case 'consulting':
-        console.log('category was '+category+' babay!');
         this.setState(prevState => ({
           subNavData: consultingData,
-          showMainNav: false,
+          showMainNav: true,
           showSubNav: true,
         }));
         break;
       case 'contact':
-        console.log('category was '+category+' babay!');
         this.setState(prevState => ({
           subNavData: contactData,
-          showMainNav: false,
+          showMainNav: true,
           showSubNav: true,
         }));
         break;
       default:
         console.log('blow a goat');
     } 
+
+    // set previousCategory so we can compare on next main nav click
+    this.setState(prevState => ({
+      previousCategory: category,
+    }));
   }
-  
-  handleClick = (e) => {
-    console.log('call handleClick()');
-    console.log('--');
-    console.log('e.target.classList');
-    console.log(e.target.classList.contains('sub-nav-hex'));
-    console.log('--');
-    if(e.target.classList.contains('sub-nav-hex')) {
-      return;
-    } else {
-      console.log('handleClick Removing Click Event Listener');
-      document.removeEventListener('click', this.handleClick, false);
-      this.setState(prevState => ({
-        showMainNav: true,
-        showSubNav: false,
-      }));
-    }
-  }
+
+  // handleClick = (e) => {
+  //   console.log('call handleClick()');
+  //   console.log('--');
+  //   console.log('e.target.classList');
+  //   console.log(e.target.classList.contains('sub-nav-hex'));
+  //   console.log('--');
+  //   if(e.target.classList.contains('sub-nav-hex')) {
+  //     return;
+  //   } else {
+  //     console.log('handleClick Removing Click Event Listener');
+  //     document.removeEventListener('click', this.handleClick, false);
+  //     this.setState(prevState => ({
+  //       showMainNav: true,
+  //       showSubNav: false,
+  //     }));
+  //   }
+  // }
 
   handleSubNavClick = () => {
     console.log('subnav item clicked, doing nothing');
@@ -103,9 +119,9 @@ class NavController extends Component {
             show={this.state.showMainNav}
             opacity={1}
             hexagonRef={node => this.node = node}
-            classNames={"main-nav-hex "}
+            classNames={"main-nav-hex"}
           ></HexNav>
-          <HexNav
+          <SubNav
             data={this.state.subNavData}
             // passing instance of function down to component (not calling the function)
             onItemClick={this.handleSubNavClick}
@@ -114,7 +130,7 @@ class NavController extends Component {
             opacity={1}
             hexagonRef={node => this.node = node}
             classNames={"sub-nav-hex"}
-          ></HexNav>
+          ></SubNav>
         </div>
     );
   }

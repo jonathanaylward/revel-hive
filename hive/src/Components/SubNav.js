@@ -3,7 +3,7 @@ import { easePolyOut } from "d3-ease";
 import Animate from "react-move/Animate";
 import Hexagon from "./Hexagon";
 
-class HexNav extends Component {
+class SubNav extends Component {
     constructor(props) {
         super(props);
         this.handleClick = this.handleClick.bind(this);
@@ -26,24 +26,42 @@ class HexNav extends Component {
         show={this.props.show}
         start={{
           opacity: 0,
-          left: 0,
-          top:0,
+          left: hexagon.initialLeft,
+          top: hexagon.initialTop,
           fill: hexagon.fill,
           stroke: hexagon.stroke
         }}
-        enter={{
-          opacity: [this.props.opacity],
-          left: [hexagon.left],
-          top: [hexagon.top],
-          timing: { delay: hexagon.delay, duration: 1000, ease: easePolyOut }
-        }}
-        update={
-          {
-            opacity: 1,
-            left: [hexagon.left],
-            top: [hexagon.top],
-            timing: { delay: 500, duration: 500, ease: easePolyOut }
-          }
+        enter={[
+            {
+                opacity: 0,
+                left: [hexagon.initialLeft],
+                top: [hexagon.initialTop],
+                timing: { delay: 0, duration: 0, ease: easePolyOut }
+            },
+            {
+                opacity: [this.props.opacity],
+                left: [hexagon.left],
+                top: [hexagon.top],
+                timing: { delay: hexagon.delay, duration: 1000, ease: easePolyOut }
+              }
+        ]}
+        update={[
+            {
+                opacity: 0,
+                timing: {delay: 0, duration: 0, ease: easePolyOut }
+            },
+            {
+                left: [hexagon.initialLeft],
+                top: [hexagon.initialTop],
+                timing: { delay: 100, duration: 100, ease: easePolyOut }
+            },
+            {
+                opacity: 1,
+                left: [hexagon.left],
+                top: [hexagon.top],
+                timing: { delay: 200, duration: 1000, ease: easePolyOut }
+            }
+        ]
         }
         leave={{
           left: [hexagon.left],
@@ -84,4 +102,4 @@ class HexNav extends Component {
   }
 }
 
-export default HexNav;
+export default SubNav;

@@ -16,9 +16,11 @@ class Hexagon extends React.Component {
                 onClick={this.props.onClick}
                 ref={this.props.hexagonRef}
                 className={this.props.classNames}
-                style={this.props.SvgAnimationStyle}  
+                style={this.props.boxStyling}  
             > 
+            <span>
             {this.props.text}
+            </span>
             </div>
         )
     }

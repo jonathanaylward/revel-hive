@@ -1,14 +1,66 @@
 .hex-nav-box {
-    background-color:pink;
-    color:white;
-    position: absolute;
-    left:-200px;
-    width: 213px;
-    height: 185px;
-    display:flex;
-    justify-content:center;
-    align-items:center
+  color:white;
+  position:absolute;
+  top: 200px;
+  left:100px;
+  width: 213px;
+  height: 185px;
+  display:flex;
+  justify-content:center;
+  align-items:center
 }
+
+.hex-nav-box.main-box:hover {
+  cursor: default;
+}
+.hex-nav-box span {
+  display: inline-block;
+  max-width: 62%;
+  text-align: center;
+}
+.hex-nav-box:hover {
+  cursor:pointer;
+  z-index:1000;
+}
+.hex-nav-box.main {
+    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370959466-907A4RCBNSBOWDWDM8Q7/revel-hive-images-main.png?content-type=image%2Fpng');
+    background-repeat: no-repeat;
+    background-size:100%;
+}
+.hex-nav-box.partnership-sales {
+    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370940014-QV77DD6GLI9Z08GIIN7C/revel-hive-images-green.png?content-type=image%2Fpng');
+    background-repeat: no-repeat;
+    background-size:100%;
+  }
+.hex-nav-box.partnership-sales:hover {
+      background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370950588-7HMRCJUB8RHQA8QZ46C4/revel-hive-images-green-hover.png?content-type=image%2Fpng');
+  }
+.hex-nav-box.consulting {
+    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370970475-LOOXYP0JTIUQXFJPY0TB/revel-hive-images-orange.png?content-type=image%2Fpng');
+    background-repeat: no-repeat;
+    background-size:100%;
+  }
+.hex-nav-box.consulting:hover {
+      background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370978782-XECCBOJIUJ4LTBLXLPIL/revel-hive-images-orange-hover.png?content-type=image%2Fpng');
+  }
+.hex-nav-box.contact {
+    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370989264-DIBDNBAZDJMH9WLT4K8P/revel-hive-images-pink.png?content-type=image%2Fpng');
+    background-repeat: no-repeat;
+    background-size:100%;
+  }
+.hex-nav-box.contact:hover {
+      background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370997012-02TGZVNJEXGK9D223NF8/revel-hive-images-pink-hover.png?content-type=image%2Fpng');
+  }
+.hex-nav-box.marketing {
+    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370923709-0JPOW57F54VIRNVYC3YK/revel-hive-images-blue.png?content-type=image%2Fpng');
+    background-repeat: no-repeat;
+    background-size:100%;
+  }
+.hex-nav-box.marketing:hover {
+      background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370931963-OF8ZGEDKH1L9NGEM35N4/revel-hive-images-blue-hover.png?content-type=image%2Fpng');
+  }
+
+
 
 body {
     font: 14px "Century Gothic", Futura, sans-serif;
