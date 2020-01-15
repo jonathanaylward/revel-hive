@@ -23,7 +23,7 @@
   z-index:1000;
 }
 .hex-nav-box.main {
-    background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370959466-907A4RCBNSBOWDWDM8Q7/revel-hive-images-main.png?content-type=image%2Fpng');
+    background-image: url('https://static1.squarespace.com/static/5dec1a8d4b119f091b5959f2/t/5e1e7c7f348d0b3315f14065/1579056247151/revel-hive-images-main-2.png?format=500w');
     background-repeat: no-repeat;
     background-size:100%;
 }
@@ -35,12 +35,12 @@
 .hex-nav-box.partnership-sales:hover {
       background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370950588-7HMRCJUB8RHQA8QZ46C4/revel-hive-images-green-hover.png?content-type=image%2Fpng');
   }
-.hex-nav-box.consulting {
+.hex-nav-box.operations {
     background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370970475-LOOXYP0JTIUQXFJPY0TB/revel-hive-images-orange.png?content-type=image%2Fpng');
     background-repeat: no-repeat;
     background-size:100%;
   }
-.hex-nav-box.consulting:hover {
+.hex-nav-box.operations:hover {
       background-image: url('https://images.squarespace-cdn.com/content/5dec1a8d4b119f091b5959f2/1576370978782-XECCBOJIUJ4LTBLXLPIL/revel-hive-images-orange-hover.png?content-type=image%2Fpng');
   }
 .hex-nav-box.contact {

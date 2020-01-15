@@ -71,8 +71,8 @@ const MainNavData = [
       delay: 200,
       fill: color3,
       stroke: stroke3,
-      text: `Consulting`,
-      category: `consulting`,
+      text: `Operations`,
+      category: `operations`,
 
     },
     {
@@ -151,7 +151,7 @@ const marketingData = [
       stroke: stroke2,
       text: `Marketing Plans`,
       category: `marketing`,
-      link: `/marketing/marketing-plans`,
+      link: `/marketing/#marketingplans`,
     },
     {
       top: -50,
@@ -163,7 +163,7 @@ const marketingData = [
       stroke: stroke2,
       text: `Brand Marketing Campaigns`,
       category: `marketing`,
-      link: `/marketing/brand-marketing-campaigns`,
+      link: `/marketing/#brandmarketingcampaigns`,
     },
     {
       top: -50,
@@ -175,12 +175,12 @@ const marketingData = [
       stroke: stroke2,
       text: `Direct Marketing`,
       category: `marketing`,
-      link: `/marketing/direct-marketing`,
+      link: `/marketing/#directmarketing`,
     }
 ]
 
 
-const consultingData = [
+const operationsData = [
     {
       top: 50,
       left: 176,
@@ -190,8 +190,8 @@ const consultingData = [
       fill: color3,
       stroke: stroke3,
       text: `Hospitality`,
-      category: `consulting`,
-      link: `/consulting/hospitality`,
+      category: `operations`,
+      link: `/operations#hospitality`,
     },
     {
       top: 50,
@@ -202,8 +202,8 @@ const consultingData = [
       fill: color3,
       stroke: stroke3,
       text: `Marketing Strategy`,
-      category: `consulting`,
-      link: `/consulting/marketing-strategy`,
+      category: `operations`,
+      link: `/operations#marketingstrategy`,
     },
     {
       top: 50,
@@ -214,8 +214,8 @@ const consultingData = [
       fill: color3,
       stroke: stroke3,
       text: `Partnership Strategy`,
-      category: `consulting`,
-      link: `/consulting/partnership-strategy`,
+      category: `operations`,
+      link: `/operations#partnershipstrategy`,
     }
 ]
 
@@ -258,4 +258,4 @@ const contactData = [
     }
 ]
 
-export { MainNavData, partnershipSalesData, marketingData, consultingData, contactData }
+export { MainNavData, partnershipSalesData, marketingData, operationsData, contactData }

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HexNav from "./HexNav";
 import SubNav from "./SubNav";
-import {MainNavData, partnershipSalesData, marketingData, consultingData, contactData } from "./Data";
+import {MainNavData, partnershipSalesData, marketingData, operationsData, contactData } from "./Data";
 
 class NavController extends Component {
   constructor(props) {
@@ -57,9 +57,9 @@ class NavController extends Component {
           showSubNav: true,
         }));
         break;
-      case 'consulting':
+      case 'operations':
         this.setState(prevState => ({
-          subNavData: consultingData,
+          subNavData: operationsData,
           showMainNav: true,
           showSubNav: true,
         }));
